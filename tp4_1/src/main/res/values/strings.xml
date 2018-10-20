@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TP4_1</string>
+    <string name="title_activity_maps">TP4_1</string>
+    <string name="action_settings">menu</string>
+    <string name="switchLabel"> Changer le terrain  </string>
+</resources>

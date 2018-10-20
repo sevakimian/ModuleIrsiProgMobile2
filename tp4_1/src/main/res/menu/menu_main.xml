@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.eigsi.irsi.myapplication.MainActivity">
+
+
+    <item
+        android:id="@+id/switchTerrain"
+        android:orderInCategory="101"
+        android:title="@string/switchLabel"
+        app:actionLayout="@layout/switch_item"
+    />
+    <item android:title= "sousmenu"/>
+        <menu>
+            <item android:title="sousmenu1"/>
+
+            <item android:title="sousmenu2" />
+
+        </menu>
+
+     />
+
+
+</menu>

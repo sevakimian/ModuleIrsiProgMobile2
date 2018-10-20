@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TP3_Convertisseur</string>
+    <string name="lblEuros">Euros</string>
+    <string name="lblDollars">Dollars</string>
+    <string name="lblTaux">Taux Euros/Dollars</string>
+
+
+
+</resources>
