@@ -10,15 +10,18 @@
         android:title="@string/switchLabel"
         app:actionLayout="@layout/switch_item"
     />
-    <item android:title= "sousmenu"/>
+    <item
+        android:id="@+id/itemQuitter"
+        android:title="Quitter l'application"
+        />
+
+
+   <!-- <item android:title= "sousmenu 0"/>
         <menu>
-            <item android:title="sousmenu1"/>
+            <item android:title="sousmenu 1"/>
 
-            <item android:title="sousmenu2" />
-
+            <item android:title="sousmenu 2" />
         </menu>
-
-     />
-
+     />-->
 
 </menu>

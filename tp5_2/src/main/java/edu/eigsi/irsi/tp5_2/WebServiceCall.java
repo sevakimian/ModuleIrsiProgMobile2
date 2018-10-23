@@ -1,6 +1,5 @@
-package edu.eigsi.irsi.tp5_1;
+package edu.eigsi.irsi.tp5_2;
 
-import android.app.ProgressDialog;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -20,25 +19,12 @@ public class WebServiceCall implements Response.Listener<String>{
     private RequestQueue queue;
     private String url;
 
-    public WebServiceCall (MainActivity activity, String clientName, String url){
+    public WebServiceCall(MainActivity activity, String clientName, String url){
         super();
         this.activity=activity;
         this.clientName=clientName;
         this.url=url;
-        queue= Volley.newRequestQueue(activity);
-        StringRequest myReq = new StringRequest(Request.Method.POST, url, this, null){
-
-
-            @Override
-            protected Map<String,String> getParams() throws com.android.volley.AuthFailureError{
-                Map <String, String> params = new HashMap<String,String>();
-                params.put("username", WebServiceCall.this.clientName);
-                params.put("gps_pos", "1;1;7");
-                return params;
-            };
-        };
-
-        queue.add(myReq);
+        this.queue= Volley.newRequestQueue(activity);
     }
 
 
@@ -50,5 +36,19 @@ public class WebServiceCall implements Response.Listener<String>{
             Toast.makeText(activity,s, Toast.LENGTH_LONG);
         }
         activity.populate(s);
+    }
+
+    public void write(final String s){
+        StringRequest myReq = new StringRequest(Request.Method.POST, url, this, null){
+            @Override
+            protected Map<String,String> getParams() throws com.android.volley.AuthFailureError{
+                Map <String, String> params = new HashMap<String,String>();
+                params.put("username", WebServiceCall.this.clientName);
+                params.put("gps_pos", s);
+                return params;
+            };
+        };
+
+        this.queue.add(myReq);
     }
 }
